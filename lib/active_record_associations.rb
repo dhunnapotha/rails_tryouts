@@ -75,6 +75,7 @@ create_table :pictures do |t|
   t.string  :imageable_type
   t.timestamps null: false
 end
+# A similar thing can be achieved by using STI - ie., by defining classes like UserPicture and ProductPicture and associating them to users and products. But it is a waste of code if there is no major functionaly specific to ProductPicture or UserPicture
 
 
 
