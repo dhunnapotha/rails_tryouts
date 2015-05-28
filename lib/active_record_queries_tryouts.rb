@@ -13,26 +13,29 @@ if want to get the count then
 
 having - define conditions on group clause - Member.group("organization_id").having("count(organization_id) > 30").count
 
-joins - Member.joins(:users), Member.joins(:users, :pending_notifications)
+joins - Member.joins(:users), Member.joins(:users, :notifications)
 
-SQL 
-inner join - the overlapping part
-left outer join - the whole of left table
-right outer join - the whole of right table
+# SQL 
+# inner join - the overlapping part
+# left outer join - the whole of left table
+# right outer join - the whole of right table
 
 
-Category
+class Category
   has_many :articles
   has_many :tags
+end
 
-Article
+class Article
   has_many :comments
   belongs_to :category
   has_many :tags
+end
 
-Comments
+class Comments
   has_one :guest
   belongs_to :article
+end
 
 
 
