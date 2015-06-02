@@ -25,6 +25,8 @@ Rails.application.routes.draw do
 
   resource :geocoder
 
+  resources :projects
+
 end
 
 

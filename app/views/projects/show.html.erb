@@ -1,0 +1,5 @@
+<% cache @project do %>
+  <h1> <%= @project.name %> </h1>
+  <%= render :partial => "tasks/task", :collection => @project.tasks, :as => :task  %>
+<% end %>
+
