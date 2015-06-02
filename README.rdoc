@@ -1,3 +1,10 @@
+== Items
+Tried out russian doll caching in projects & tasks models 
+- include 'cache_digests' gem - otherwise you have to manually feed the versions of templates
+- when trying out the caching, make sure console and server are restarted, so that new changes take effect
+- have touch: true option on the belongs to of the child element, so that parent caches are invalidated when the child elements are updated
+
+
 == README
 
 This README would normally document whatever steps are necessary to get the
