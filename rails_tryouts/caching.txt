@@ -1,0 +1,18 @@
+Page Caching - page is rendered by the webserver directly without going to RAILS stack at all
+Action Caching - page is rendered by RAILS stack after checking the before_action filters
+Fragment - Fragements of views are cached in this. You need to expire fragments when required. If the fragments are created based on model objects, then they automatically expire and refresh when teh object is modified
+
+
+SQL Caching - Caches the sql query to result. If the same query happens in the same request, it will fetch from the store cache
+
+cache stores: memcache is the store that in general many of the production servers use
+
+All the caching happens in RAM
+
+Memcache vs Redis - vague compilation
+
+- Apparently, cache clustering was not suppported in Redis before but now it is supported, so one should go for Redis caching for all new projects.
+- On advantage of Redis over memcache is it provides server side command line utils through which one can administer data
+- Memcache supports only strings as values. Redis supports lot of other data types, which makes it more flexible.
+
+
